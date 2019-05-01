@@ -1,0 +1,318 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0%;
+	padding: 0%;
+}
+
+#contactForm {
+	background-color: #ffffff;
+	font-family: Raleway;
+	padding: 40px;
+	margin: auto;
+	width: 100%;
+	min-height: calc(80vh);
+}
+
+.modal--container {
+	width: calc(100vw);
+	height: calc(100vh);
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+}
+
+.modal--container--headline {
+	text-align: center;
+}
+
+.modal--container--content {
+	width: calc(75vw);
+	height: calc(75vh);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.modal--container--tabs--line {
+	text-align: center;
+		width: 100%;
+	margin: 30px 0px;
+	position: relative;
+}
+
+.tabs--line {
+	width: 50%;
+	background-color: #ddd;
+	margin: auto;
+}
+
+.step--line {
+	padding: 1px;
+	margin-top: -27px;
+	margin-bottom: 50px;
+	z-index: -1;
+}
+
+.step--line.w33 {
+	width: 33.33%;
+	background-color: #00cc00;
+}
+
+.step--line.w66 {
+	width: 66.66%;
+	background-color: #00cc00;
+}
+
+.step--line.w100 {
+	width: 100.00%;
+	background-color: #00cc00;
+}
+
+input {
+	padding: 10px;
+	width: 100%;
+	font-size: 17px;
+	font-family: Raleway;
+	border: 1px solid #aaaaaa;
+	transition: all 1s ease-in-out;
+}
+
+label.invalid {
+	color: #ee0000;
+	transition: all 1s ease-in-out;
+}
+
+input.invalid {
+	background-color: #ffdddd;
+	transition: all 1s ease-in-out;
+}
+
+.tab {
+	display: none;
+	transition: all 1s ease-in-out;
+}
+
+.tab > div {
+	padding: 10px 0px;
+}
+
+div.button {
+	background-color: #4CAF50;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 17px;
+	font-family: Raleway;
+	cursor: pointer;
+}
+
+div.button:hover {
+	opacity: 0.8;
+}
+
+.modal--container--form--button {
+	width: 100%;
+}
+
+.modal--container--form--button > .button {
+	/*max-width: 200px;*/
+	float: left;
+}
+
+.button:nth-of-type(1) {
+	margin-right: 2px;
+}
+
+.button:nth-of-type(2) {
+	margin-left: 2px;
+}
+
+#prevBtn {
+	background-color: #bbbbbb;
+}
+
+#nextBtn,
+#prevBtn {
+	width: 49.65%;
+	text-align: center;
+}
+
+.step {
+	height: 25px;
+	width: 25px;
+	padding: 2.5px;
+	background-color: #fff;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+	border: 2px solid #ccc; 
+	border-radius: 50%;
+	display: inline-block;
+	z-index: 1;
+}
+
+.step:nth-of-type(1){
+	margin: 10px 25px 10px 0px;
+}
+
+.step:nth-of-type(2),
+.step:nth-of-type(3){
+	margin: 10px 25px;
+}
+
+.step:nth-of-type(4){
+	margin: 10px 0px 10px 25px;
+}
+
+.step.active {
+	background-color: #00cc00;
+	border: 2px solid #fff;
+}
+
+.step.finish {
+	background-color: #00cc00;
+	border: 2px solid #00cc00;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.0);
+}
+
+.step.finish::after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.modal--container--close {
+	font-size: 36px;
+	position: absolute;
+	top: 2.5%;
+	right: 5%;
+	cursor: pointer;
+}
+
+/**
+	* Media Queries
+	*/
+
+@media screen and (min-width: 1261px){
+
+	.tabs--line {
+		width: 25%;
+	}
+
+}
+
+@media screen and (max-width: 1260px){
+
+	.tabs--line {
+		width: 30%;
+	}
+
+}
+
+@media screen and (max-width: 1050px){
+
+	.tabs--line {
+		width: 35%;
+	}
+
+}
+
+@media screen and (max-width: 910px){
+
+	.tabs--line {
+		width: 40%;
+	}
+
+}
+
+@media screen and (max-width: 862px){
+
+	#nextBtn,
+	#prevBtn {
+		width: 49.5%;
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 815px){
+
+	.tabs--line {
+		width: 45%;
+	}
+
+}
+
+@media screen and (max-width: 767px){
+
+	.tabs--line {
+		width: 50%;
+	}
+
+	.modal--container--form--button > .button {
+		float: none;
+		display: block;
+	}
+
+	.button:nth-of-type(1) {
+		margin-right: 0px;
+	}
+
+	.button:nth-of-type(2) {
+		margin-left: 0px;
+	}
+
+	#nextBtn,
+	#prevBtn {
+		width: 100%;
+		margin: 10px 0px;
+	}
+
+}
+
+@media screen and (max-width: 670px){
+
+	.tabs--line {
+		width: 55%;
+	}
+
+}
+
+@media screen and (max-width: 625px){
+
+	.tabs--line {
+		width: 60%;
+	}
+
+}
+
+@media screen and (max-width: 576px){
+
+	.tabs--line {
+		width: 33%;
+	}
+
+	.step:nth-of-type(1){
+		margin: 10px 5px 10px 0px;
+	}
+
+	.step:nth-of-type(2),
+	.step:nth-of-type(3){
+		margin: 10px 5px;
+	}
+
+	.step:nth-of-type(4){
+		margin: 10px 0px 10px 5px;
+	}
+
+}
+
+@media screen and (max-width: 500px){
+
+	.tabs--line {
+		width: 50%;
+	}
+
+}
